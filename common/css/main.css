@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap");
+/* 
+* Google Fonts:
+*   font-family: 'Poppins', sans-serif;
+*       font-weight: 500;
+*       font-weight: 700;
+*   font-family: 'Roboto', sans-serif;
+*       font-weight: 400;
+*       font-weight: 700;
+*/
+
+@import url("normalize.css");
+
 :root {
     /* Font Variables */
     --font-heading: 'Poppins', Helvetica, Arial, sans-serif;
@@ -73,10 +86,11 @@ a:hover, a:focus {
 #select-grid {
     display: grid;
     justify-items: center;
+    grid-gap: 2.5rem;
 }
 
     #select-grid .select-item {
-        margin-bottom: 1.5em;
+        background: #b4b4b4;
     }
 
         #select-grid .select-item a {
@@ -85,6 +99,7 @@ a:hover, a:focus {
 
         #select-grid .select-item .thumbnail {
             border: 2px solid #000;
+            width: 100%;
         }
 
         #select-grid .select-item .item-headline {
@@ -94,15 +109,57 @@ a:hover, a:focus {
 
 /* Elements */
 
+button, .button {
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    /* Clear defaults */
+    background: none;
+    outline: none;
+    border: none;
+
+    background: #A1A1A1;
+    padding: .5rem 1em;
+    border-radius: 30px;
+}
+
+    button:hover, .button:hover {
+        color: #fff;
+        background: #b4b4b4;
+    }
+
 #to-top {
     position: fixed;
     bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ------ Tablet Styles ------ */
 /* min-width: 768px */
 @media screen and (min-width: 48rem) {
+    /* General */
+
     h1 {
         font-size: 3rem;
+    }
+
+    /* Layout */
+
+    #select-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* ------ Tablet Styles ------ */
+/* min-width: 1024px */
+@media screen and (min-width: 64rem) {
+    /* General */
+
+    /* Layout */
+
+    #select-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
