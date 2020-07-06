@@ -43,6 +43,7 @@ body {
 header {
     background: #fff;
     padding: .5em 0;
+    margin-bottom: 1em;
     position: sticky;
     top: 0;
     width: 100%;
@@ -107,11 +108,19 @@ a:hover, a:focus {
             padding: 0 1em;
         }
 
+#work-area {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
 /* Elements */
 
 button, .button {
     font-weight: 700;
     font-size: 1.5rem;
+    color: #fff;
+    display: inline-block;
 
     /* Clear defaults */
     background: none;
@@ -123,10 +132,20 @@ button, .button {
     border-radius: 30px;
 }
 
-    button:hover, .button:hover {
+    button:hover, .button:hover,
+    button:focus, .button:focus {
         color: #fff;
         background: #b4b4b4;
     }
+
+    .button.back-link {
+        background: #FF5D73;
+    }
+
+        .button.back-link:hover,
+        .button.back-link:focus {
+            background: #d85466;
+        }
 
 #to-top {
     position: fixed;
@@ -134,6 +153,41 @@ button, .button {
     left: 50%;
     transform: translateX(-50%);
 }
+
+#controls {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    #controls .control-bar {
+        height: 3.75rem;
+        width: 21.5rem;
+        margin-bottom: 1em;
+        padding: 0.625rem;
+        border-radius: 1.875rem;
+
+        background: #fff;
+
+        display: flex;
+    }
+
+    #controls #color-bar {
+        justify-content: space-between;
+    }
+
+    #controls #tool-bar {
+        justify-content: space-around;
+    }
+
+        /* To be removed once icons are implemented */
+        #controls .control-bar .dummy-tool {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+        }
 
 /* ------ Tablet Styles ------ */
 /* min-width: 768px */
