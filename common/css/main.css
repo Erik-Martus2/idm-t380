@@ -1,0 +1,108 @@
+:root {
+    /* Font Variables */
+    --font-heading: 'Poppins', Helvetica, Arial, sans-serif;
+    --font-body: 'Roboto', Helvetica, Arial, sans-serif;
+
+    /* Color Variables */
+
+    /* Sizing Variables */
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* General */
+
+html {
+    font-size: 100%;
+    color: #000;
+}
+
+body {
+    position: relative;
+    background: #DFDFDF;
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #fff;
+    padding: .5em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    color: #494949;
+}
+
+a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #b4b4b4;
+}
+
+/* ------ Mobile Styles ------ */
+
+/* Layout */
+
+.content {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+#select-grid {
+    display: grid;
+    justify-items: center;
+}
+
+    #select-grid .select-item {
+        margin-bottom: 1.5em;
+    }
+
+        #select-grid .select-item a {
+            color: #000;
+        }
+
+        #select-grid .select-item .thumbnail {
+            border: 2px solid #000;
+        }
+
+        #select-grid .select-item .item-headline {
+            font-size: 1.25rem;
+            padding: 0 1em;
+        }
+
+/* Elements */
+
+#to-top {
+    position: fixed;
+    bottom: 2rem;
+}
+
+/* ------ Tablet Styles ------ */
+/* min-width: 768px */
+@media screen and (min-width: 48rem) {
+    h1 {
+        font-size: 3rem;
+    }
+}
