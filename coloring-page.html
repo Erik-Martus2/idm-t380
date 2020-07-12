@@ -7,6 +7,7 @@
 	<title>Page | Coloring Book</title>
 
 	<link rel="stylesheet" type="text/css" href="/common/css/main.css" />
+	<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 </head>
 
 <body>
@@ -46,8 +47,10 @@
 	</main>
 	<div id="color-picker_modal" class="modal">
 		<div class="modal-content">
+		    <h2>Select a Color</h2>
 			<button class="btn close">Close</button>
-			<p>Some content</p>
+			<div id="picker"></div>
+			<div id="selected-color-shower"><h3 id="hexchange">#FFFFFF</h3></div>
 		</div>
 	</div>
 	<script src="common/scripts/coloringBook.js"></script>
