@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap");
-/* 
+/*
 * Google Fonts:
 *   font-family: 'Poppins', sans-serif;
 *       font-weight: 500;
@@ -34,10 +34,24 @@ html {
 
 body {
     position: relative;
-    background: #DFDFDF;
-    font-family: var(--font-body);
     margin: 0;
     padding: 0;
+    font-family: var(--font-body);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 header {
@@ -189,6 +203,12 @@ button, .button {
             border-radius: 50%;
         }
 
+        .toolIcon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+        }
+
 /* Modal styles */
 div.modal {
     display: none;
@@ -228,6 +248,8 @@ div.modal {
             top: 1rem;
             right: 1rem;
         }
+
+
 
 /* ------ Tablet Styles ------ */
 /* min-width: 768px */
