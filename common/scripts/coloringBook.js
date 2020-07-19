@@ -1,3 +1,5 @@
+//for now still not using the node package
+//const iro = require('@jaames/iro');
 const picker_tool = document.getElementById('color-picker');
 
 picker_tool.addEventListener('mousedown', function() {
