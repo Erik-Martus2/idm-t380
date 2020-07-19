@@ -135,6 +135,7 @@ button, .button {
     font-size: 1.5rem;
     color: #fff;
     display: inline-block;
+    cursor: pointer;
 
     /* Clear defaults */
     background: none;
